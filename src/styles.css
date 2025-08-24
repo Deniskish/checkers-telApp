@@ -51,15 +51,23 @@
   }   
   
   .board {
-    display: inline-block;
     border: 2px solid #222;
+  
+    width: min(100vw, 100vh); /* ширина равна меньшей стороне экрана */
+    aspect-ratio: 1 / 1;      /* квадрат */
+    max-width: 600px;         /* ограничение сверху */
+    margin: 0 auto;           /* по центру */
   }
   
+  
   .board-row {
+    flex: 1;
     display: flex;
   }
   
   .cell {
+    flex: 1;
+    aspect-ratio: 1 / 1; /* квадратная клетка */
     width: 60px;
     height: 60px;
     box-sizing: border-box;
