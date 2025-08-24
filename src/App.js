@@ -12,7 +12,7 @@ function App() {
     await tonConnectUI.sendTransaction({
       validUntil: Math.floor(Date.now() / 1000) + 600,
       messages: [{
-        address: 'EQDzsM9IxhkMvLCXf-kf8HP53hVINPdsbKttmh-MhDEbUdA_',
+        address: 'UQDzsM9IxhkMvLCXf-kf8HP53hVINPdsbKttmh-MhDEbUdA_',
         amount: '100000000',
         comment: 'checkers:match1'
       }]
