@@ -1,0 +1,142 @@
+  .app {
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+  .wallet-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .wallet-button {
+    padding: 10px 20px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  .wallet-button:hover {
+    background-color: #4338ca;
+  }
+  .wallet-button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+  }
+  .wallet-button:disabled:hover {
+    background-color: #9ca3af;
+  }
+  .wallet-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(79,70,229,0.5);
+  }
+  .wallet-button:active {
+    background-color: #3730a3;
+  }
+  .wallet-button:disabled:active {
+    background-color: #9ca3af;
+  }
+  .wallet-button-wrapper {
+    margin-top: 20px;
+  }
+  .wallet-info {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #374151;
+  }
+  .wallet-info span {
+    font-weight: bold;
+  }   
+  
+  .board {
+    display: inline-block;
+    border: 2px solid #222;
+  }
+  
+  .board-row {
+    display: flex;
+  }
+  
+  .cell {
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cell.white {
+    background-color: #eee;
+  }
+  
+  .cell.black {
+    background-color: #444;
+  }
+  
+/* Подсветка выбранной клетки */
+.cell.selected {
+  outline: 3px solid #22c55e;
+  outline-offset: -3px;
+}
+
+/* Подсветка возможных ходов */
+.cell.hint {
+  position: relative;
+}
+.cell.hint::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(34,197,94,0.8);
+  background: rgba(34,197,94,0.2);
+}
+
+/* Цвета клеток */
+.cell.white {
+  background-color: #f8fafc;
+}
+.cell.black {
+  background-color: #475569;
+}
+
+  
+.piece {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2),
+              inset 0 -2px 0 rgba(0,0,0,0.3);
+}
+
+.piece.white {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+.piece.black {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+.piece.king {
+  outline: 3px solid gold;
+}
+
+.king-mark {
+  color: gold;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+  
