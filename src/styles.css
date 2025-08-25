@@ -50,19 +50,33 @@
     font-weight: bold;
   }   
   
-  .board {
+  /* .board {
     display: inline-block;
     border: 2px solid #222;
+  } */
+  .board {
+    display: inline-block;
+    width: min(100svw, 100svh);
+    max-width: 640px;
+    aspect-ratio: 1 / 1;
   }
   
   .board-row {
     display: flex;
+    flex: 1;          /* строки равные */
   }
   
-  .cell {
+  /* .cell {
     width: 60px;
     height: 60px;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+  .cell {
+    flex: 1;          /* клетки равные в строке */
+    aspect-ratio: 1/1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,7 +119,7 @@
 }
 
   
-.piece {
+/* .piece {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -115,6 +129,18 @@
   font-weight: bold;
   font-size: 24px;
   cursor: pointer;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2),
+              inset 0 -2px 0 rgba(0,0,0,0.3);
+} */
+.piece {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: clamp(12px, 6vmin, 24px);
   box-shadow: inset 0 2px 0 rgba(255,255,255,0.2),
               inset 0 -2px 0 rgba(0,0,0,0.3);
 }

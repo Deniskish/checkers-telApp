@@ -3,6 +3,9 @@ import Board from './Board';
 import './styles.css';
 import { useTonConnectUI, TonConnectButton, useTonAddress } from '@tonconnect/ui-react';
 
+const tg = window.Telegram?.WebApp;
+  tg?.ready();
+  tg?.expand();
 function App() {
   const [tonConnectUI] = useTonConnectUI();
   const userWallet = useTonAddress(); // адрес кошелька
