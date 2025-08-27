@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <TonConnectUIProvider manifestUrl="/tonconnect-manifest.json">
+    <TonConnectUIProvider manifestUrl="https://checkers-tel-app-so51.vercel.app/tonconnect-manifest.json">
       <App />
     </TonConnectUIProvider>
   </React.StrictMode>
